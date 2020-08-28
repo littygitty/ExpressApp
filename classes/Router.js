@@ -38,8 +38,14 @@ class Router{
      * no controllers or models
      */
     addBaseRoutes() {
+        AraDTApp.get('/', this.home);
         AraDTApp.get('/register', this.signup);
     }
+    
+    home(request, response){
+        response.render('index');
+        }
+
     signup(request, response){
         response.render('register');
         }
